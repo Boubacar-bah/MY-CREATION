@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>First Creation</title>
+   <link rel="stylesheet" href="sttle.css">
+   <script src="https://kit.fontawesome.com/5b08a15314.js" crossorigin="anonymous"></script>
+   <link rel="icon" type="image/x-icon" href="mylogo.png">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Kanit|Dela+Gothic+One">
+   <script src="animation.js" defer="true"></script>
+   <script>
+      function openNav() {
+         let affiche = document.getElementById("mySidenav").style;
+         affiche.display = "block";
+         affiche.width = "70%";
+         affiche.right = "30%";
+      }
+
+      function closeNav() {
+         let cache = document.getElementById("mySidenav").style;
+         cache.width = "0";
+         cache.right = "100%";
+      }
+   </script>
+</head>
+<body>
+   <div class="flexcontainer" id="mySidenav">
+      <div class="close" onclick="closeNav()">&times;</div>
+      <div><a href="#">
+         <img src="logo.png" width="100%"></a>
+      </div>
+      <div class="sidebar">
+         <ul>
+            <li><a class="active" href="index.html">Accueil</a></li>
+            <li><a href="conseils.html#introduction">Introduction</a></li>
+            <li><a href="#astuces">Astuces</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">À propos</a></li>
+         </ul>
+      </div>
+   </div>
+   <main class="grid">
+      <header class="headers">
+         <div class="flexcont" style="position: relative">
+            <div class="open" onclick="openNav()">&#9776;</div>
+            <div>
+               <h1>Boubacar Creation</h1>
+            </div>
+            <div>
+               <input type="search" id="finder" placeholder="Rechercher" onblur="setTimeout(hideIt, 200)" onkeyup="mySearch()">
+               <ul id="searchField">
+                  <li><a class="active" href="index.html">Accueil</a></li>
+                  <li><a href="conseils.html#introduction">Introduction</a></li>
+                  <li><a href="#astuces">Astuces</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">À propos</a></li>
+               </ul>
+            </div>
+      </header>
+      <section class="secondside">
+         <div class="welcome reveal">Welcome to <br><p>Boubacar Creation</p>
+         </div>
+         <div class="littleAnim">
+            <p>Toujours pessimiste parce que les sentiments ne changent pas la réalité.</p>
+         </div>
+      </section>
+      <section class="thirt">
+         <h1 class="defhead reveal">Que faire pour devenir un expert en développement web ?</h1>
+         <div class="definition">
+            <p class="defp reveal gauche">Dans cette page ; je vais parler de comment avoir plus d'expériences dans le <b>développement web</b>.
+               Que faire pour devenir, non pas un simple développeur, mais un super développeur avec plus que de d'expériences ?
+            </p>
+            <div style="width:100%; margin:auto; position:relative;text-align:center;" class="reveal droit">
+               <a style="text-decoration: none; color: inherit;" href="conseils.html"><button class="button">Démarer</button></a>
+            </div>
+      </section>
+      <footer class="footer">
+         <adress>
+            <div class="reveal"><strong style="letter-spacing: 5px;font-size: 32px;text-shadow:4px 2px 4px black"><span style="color:powderblue;">BOU</span><span style="color:rgb(93, 160, 187);">BA</span><span style="color: rgb(66, 192, 250);">CAR</span></strong></div>
+            <div style="font-size: small;text-align: center;">
+               <p class="reveal">&copy;2024 Tous droits réservés.</p>
+            </div>
+      </footer>
+   </main>
+</body>
+</html>

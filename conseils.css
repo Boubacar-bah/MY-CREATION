@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: purple;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.flexcontainer {
+    display: flex;
+}
+.navigation {
+    width: 16%;
+    top: 0;
+    right: 84%;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    overflow: auto;
+    height: 100%;
+    transition: .3s ease;
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+    width: 30px;
+    text-align: center;
+    transition: .3s;
+    -webkit-transition: .3s;
+    opacity: 0.6;
+    background-color: #333;
+}
+.close:hover {
+    opacity: 1;
+}
+.open {
+    cursor: pointer;
+    font-size: 25px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    padding: 0 5px 0 5px;
+}
+.open:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.navigation a {
+    display: block;
+    text-decoration: none;
+    padding: 20px 0 20px 0;
+    color: white;
+    text-align: center;
+    transition: .5s;
+    border-top: 1px solid purple;
+}
+.navigation a:last-child {
+    border-bottom: 1px solid purple;
+}
+.navigation a:hover:not(.active) {
+    background-color: #123;
+}
+.navigation a:active, .active {
+    background-color: #333;
+}
+.main {
+    width: 84%;
+    margin-left: 16%;
+}
+.main .header  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding-bottom: 25px;
+    
+}
+.main input {
+    background: whitesmoke url(searchicon.png) no-repeat;
+    background-position: 8px 6px;
+    padding: 8px 4px 6px 35px;
+    border-radius: 20px;
+    width: 40px;
+    transition: .2s;
+    border: 2px solid #246dcc;
+    -webkit-transition: 0.3s ease-in-out;
+
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 0;
+}
+.main input:focus {
+    outline: none;
+    border: 4px solid #246dcc;
+    width: 100%;
+}
+#searchField {
+    position: absolute;
+    top: 26px;
+    right: 0;
+    z-index: 1;
+    text-align: center;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: black;
+    padding: 1px;
+    width: 300px;
+    display: none;
+}
+
+#searchField a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 8px 0px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+#searchField a:hover {
+    background-color: rgb(146, 49, 133);
+    color: white;
+}
+.header  h1 {
+    font-family: "Kanit";
+    letter-spacing: 1.5px;
+    color: rgb(95, 95, 215);
+    text-shadow: 2px 5px 8px black, -2px -5px 5px black;
+    font-size: 1.8em;
+    text-align: center;
+    margin-right: 30px;
+    
+}
+
+/* Maintenant pour la lecture*/
+.fond {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('developer3D.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:auto;
+    background-position:center;
+}
+@media only screen and (min-width:600px) {
+    .fond  {
+        width:100%;
+        background-repeat: no-repeat;
+    }
+}
+.titre {
+    font-family: "Abril Fatface", serif;
+    font-size: 2em;
+    line-height: 1.5;
+    text-align: center;
+    width: 250px;
+    height: 70px;
+    flex: 100%;
+    margin-inline: 12px;
+    background-color: powderblue;
+    padding: 8px;
+    color: purple;
+    border-radius: 8px;
+}
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+}
+article h2 {
+    font-size: 1.3em;
+    color: lightblue;
+    padding: 8px;   
+}
+article  {
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 25px;
+    scroll-behavior: smooth;
+}
+article div {
+    border-radius: 10px 0px 10px 0;
+    border-top: 6px ridge powderblue;
+    border-right: 10px ridge rgb(177, 8, 177);
+    transition: .3s;
+    margin: 20px 10px 70px 10px;
+    max-width: 40%;
+}
+article div:hover {
+    box-shadow: 0 0 8px black, 0 0 15px purple;
+}
+article p {
+    padding: 0 25px;
+    font-family: "Ubuntu Mono", sans-serif;
+}
+@media screen and (max-width:600px) {
+    article div {
+        min-width: 90%;
+    }
+}
+@media only screen and (max-width:480px) {
+    .main .header {
+        padding-top: 20px;
+    }
+    .main .header h1 {
+        font-size: 1.2em;
+    }
+    article h2 {
+        font-size:  1.3em;
+    }
+    article p {
+        font-size: 14px;
+    }
+}
+.commençons {
+    text-align: center;
+    width: 300px;
+    padding: 16px;
+    background: purple;
+    border-radius: 16px 4px;
+    animation: anim 1s linear infinite;
+    color: white;
+    font-size: 2em; 
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 6px rgb(0, 0, 100);
+}
+.commençons:active {
+    box-shadow: 0 0;
+    top: 4px;
+}
+.commençons:hover {
+    animation-duration: 0.6s;
+    text-shadow: 2px 2px 4px black, -2px -2px 4px rgb(151, 66, 66), 1px 1px 3px orange;
+    color: powderblue;
+}
+@keyframes anim {
+    50% {background: linear-gradient(to right, purple, violet);}
+    100% {background: linear-gradient(to right, violet, purple);}
+}
+
+.fleche {
+    width: 15%;
+    margin: auto;
+    border-style: solid;
+    border-width: 100px;
+    border-color: powderblue transparent transparent;
+    animation: push 2s infinite;
+
+}
+
+@keyframes commence {
+    50% {transform:rotateX(200deg);transform:scale(1.5,1)}
+    75% {transform: rotateX(50deg)}
+    100% {transform:rotateX(20deg);}
+}
+@keyframes push {
+    0% {transform: translateY(0%); border-color: violet transparent transparent transparent;}
+    50% {transform: translateY(50%)}
+    100% {transform: translateY(0%)}
+}
+
+/* les langages */
+.affichage {
+    height: 0;
+    bottom: 100%;
+    right: 0px;
+    width: 100%;
+    overflow: hidden;
+    transition: .5s ease-in;
+    background-color: purple;
+}
+.handlHeight {
+    animation: handlHeight 3s 1 forwards;
+}
+@keyframes handlHeight {
+    0% {height: 0px;}
+    50% {height: 500px;}
+    100% {height: auto;}
+}
+.langages {
+    text-align: justify;
+    font-family: "kanit";
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    word-spacing: 2.2px;
+    width: 95%;
+    color: rgb(214, 234, 253);
+    margin-inline: auto;
+    transition: 1.5s !important;
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: black;
+    margin: 60px 10px;
+}
+.images .cadre {
+    background-color: white;
+    display: flex;
+    margin: 8px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 30%;
+    border-radius: 12px;
+    padding: 10px 15px 0;
+    box-shadow: 0 0 8px black, 0 0 19px rgba(0, 0, 0, 0.7), 0 0 30px black;
+}
+.images img {
+    float: left;
+}
+.cadre h1 {
+    font-family: "Archivo Black";
+    font-size: 32px;
+    margin-bottom: 0;
+}
+.images .cadre p {
+    font-family: "Kanit";
+    text-align: justify;
+    padding: 8px;
+    background-color: rgba(255, 255, 0, 0.911);
+    border-radius: 8px;
+    box-shadow: 0 0 8px black;
+    
+}
+.resumer {
+    flex: 15%;
+}
+.trans1 {
+    transition: 1.4s !important;
+}
+.trans2 {
+    transition: 1.8s !important;
+}
+
+/*le footer*/
+.footer {
+    grid-area: footer;
+    background-color: purple;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 2px;
+    align-items: center;
+}
+.footer strong {
+    font-family: "Dela Gothic One";
+}
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+}
+.droit {
+    transform: translateX(70px);
+}
+.gauche {
+    transform: translateX(-70px);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translate(0);
+    transition: 1.5s cubic-bezier(.5, 0, 0, 1);
+}
+/*medeas */
+@media screen and (max-width: 500px) {
+    .navigation {
+        width: 0;
+        right: 100%;
+    }
+    .main {
+        margin: 0;
+        width: 100%;
+    }
+    .images .cadre {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 501px) {
+    .header  {
+    padding-top: 20px;
+}
+    .header input:focus {
+        width: 300px;
+    }
+    .close {
+        display: none;
+    }
+    .open {
+        visibility: hidden;
+    }
+}
