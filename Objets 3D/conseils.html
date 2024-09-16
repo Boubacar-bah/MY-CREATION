@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Developer</title>
+    <link rel="stylesheet" href="conseils.css">
+    <link ref="icon" type="image/x-icon" href="logo.png">
+    <link rel="icon" type="image/x-icon" href="mylogo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Kanit|Dela+Gothic+One|Archivo+Black|Abril+Fatface"> 
+    <script src="animation.js" defer="true"></script>
+    <script>
+        function openNav() {
+            let affiche = document.getElementById("monNav").style;
+            affiche.width = "70%";
+            affiche.right = "30%";
+        }
+
+        function closeNav() {   
+            let cache = document.getElementById("monNav").style;
+            cache.width = "0";
+            cache.right = "100%";
+        }
+        function monAffiche() {
+            let change = document.getElementById('monAffiche');
+            change.classList.add("handlHeight");
+            change.style.bottom = "0";
+                            
+            let active = document.getElementById('langage');
+            active.classList.add('active');
+
+            let desactive = document.getElementById('introduction');
+            desactive.classList.remove("active");
+        }
+
+    </script>
+</head>
+<body>
+    <div class="flexcontainer">
+        <nav class="navigation" id="monNav">
+            <div class="close" onclick="closeNav()">&times;</div>
+            <img src="logo.png" width="100%">
+            <a href="index.html">Accueil</a>
+            <a href="#introduction" class="active" id="introduction">Introduction</a>
+            <a href="#langage" id="langage">Les langages</a>
+            <a href="#objectif" id="objectif">L'objectif</a>
+            <a href="#determinaion" id="determination">La determination</a>
+            <a href="#apprentissage" id="apprentissage">L'apprentissage</a>
+            <a href="#pratique" id="pratique">La pratique</a>
+        </nav>
+        <div class="main">
+            <header class="header" style="position: relative">
+                <div class="open" onclick="openNav()">&#9776;</div>
+                <div>
+                    <h1>Boubacar Creation</h1>
+                </div>
+                <div>
+                    <input type="search" id="finder" placeholder="Rechercher" onblur="setTimeout(hideIt, 200)" onkeyup="mySearch()">
+                        <ul id="searchField">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="#introduction" id="introduction">Introduction</a></li>
+                            <li><a href="#langages" id="langage">Les langages</a></li>
+                            <li><a href="#objectif" id="objectif">L'objectif</a></li>
+                            <li><a href="#determinaion" id="determination">La determination</a></li>
+                            <li><a href="#apprentissage" id="apprentissage">L'apprentissage</a></li>
+                            <li><a href="#pratique" id="pratique">La pratique</a></li>
+                        </ul>
+                </div>
+            </header>
+            <!--Maintenant pour la lectuure -->
+            <section class="fond">
+                <article id="introduction">
+                    <h1 class="reveal titre">Introduction</h1>
+                    <div class="reveal gauche">
+                        <h2>C'est quoi le développement Web ?</h2>
+                        <p>Le développement web est le processus de création et de maintenance des <b>sites web et d'applications web</b>.<br>
+                            Il englobe toutes les étapes de la conception initiale à la programmation, en passant par la gestion de bases de données, l'intégration de contenu, le design, et la mise en ligne.<br>
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <h2>Quel est son objectif ?</h2>
+                        <p>L'objectif principal du développement web est de créer des sites web fonctionnels, esthétiques et interactifs qui répondent aux besoinss des utilisateurs et des entreprises.<br>
+                        </p>
+                    </div>
+                    <div class="reveal">
+                        <h2>Quels sont ses outils ?</h2>
+                        <p>Il peut impliquer l'utilisation de langages des programmation tels que <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>, <code>Python</code>, <code>C++</code> etc. 
+                            ainsi que des frameworks et des outils spécifiques pour simplifier le processus de développement.
+                        </p>
+                    </div>
+                    <div class="reveal droit">
+                        <h2>Comment créer des sites web ?</h2>
+                        <p>En vrai, ce n'est pas de quoi je vais parler ici, <em style="color: pink"> Ici je vais parler de comment devenir la meilleure version de soi-même en temps que développeur ? 
+                        Comment avoir plus d'expériences au niveau du développement web ? Comment booster nos capacités et exploiter tout notre potentiel ?.</em></p>
+                    </div>
+                </article>
+                <div style="text-align: center;"><button class="commençons reveal gauche" onclick="monAffiche()">Commençons !</button></div>
+                <div class="fleche"></div>
+            </section>
+
+
+            <!--Les langages-->
+            <div class="affichage" id="monAffiche">
+                <h1 class="reveal titre" style="margin-inline:auto;width:95%" id="langages">Les langages</h1>
+                <p class="langages reveal droit">Etant un développeur, et voulant devenir la meilleure version de soi-même, vous devez déjè avoir entendu parler des langages de programmation suivants, 
+                    Il s'agit donc de savoir quel est le langage le plus adapté pour votre projet. Bien sûr, beaucoup de langages peuvent faire la même chose, mais quel langage est le mieux adapté pour faire une tâche spécifique ? 
+                    selon la sécurité, la simplicité, la facilité, l'efficacité et les performances.
+                    En voici ci-dessous quleques langages populaires :
+                </p>
+                <div class="images">
+                    <div class="reveal cadre">
+                        <img src="html.jpg" alt="HTML" title="Hyper Text Markup Language">
+                        <p style="color: white;background-color: tomato;">Le HTML (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) est le langage de balisage
+                        standard pour les pages Web. Avec HTML ; vous pouvez créer votre propre site Web. Il décrit la structure d'une page Web,
+                        Et il dit au navigateur comment afficher le contenu, Et c'est un langage très facile à apprendre.</p> 
+                    </div>
+                    <div class="reveal cadre trans1">
+                        <img src="css.jpg" alt="CSS" title="Cascading Syle Sheets">
+                        <p style="color: white; background-color: rgb(56, 56, 190);">Le CSS (<b>C</b>ascading <b>S</b>tyle <b>S</b>heets) signifie feuilles de style en cascade
+                            CSS décrit comment les éléments HTML doivent être affichés sur un écran, sur du papier ou dans d'autres médias.
+                            Le CSS permet d'économiser beaucoup de travail. Il permet de contrôler la mise en page de plusieurs pages Web à la fois</p>
+                    </div>
+                    <div class="reveal cadre trans2">
+                        <h1>JavaScript</h1>
+                        <img src="javaScript.jpg" alt="JavaScript" title="JavaScript">
+                        <p>JavaScript est un langage de programmation qui permet d'implémenter des mécanismes complexes sur une page web. 
+                            À chaque fois qu'une page web fait plus que simplement afficher du contenu statique — afficher du contenu mis à jour à des temps déterminés, 
+                            ou autre, JavaScript a de bonnes chances d'être impliqué. 
+                            C'est la troisième couche des technologies standards du web, après les deux premières (HTML et CSS).
+                        </p>
+                    </div>
+                    <div class="reveal cadre">
+                        <h1>Python</h1>
+                        <img src="python.jpg" alt="Python" title="Python">
+                        <p style="color: rgb(29, 71, 114); background-color: rgba(255, 166, 0, 0.61)">Python est un langage de programmation open source largement utilisé, particulièrement dans la gestion d'infrastructures, 
+                            l'analyse de données et le développement de logiciels. Il se distingue par sa simplicité, 
+                            permettant aux développeurs de se concentrer sur leurs tâches plutôt que sur les contraintes de forme des langages plus anciens, ce qui accélère le développement. 
+                            Python est également accessible aux débutants avec un peu de pratique, et de nombreux tutoriels et forums sont disponibles pour les aider.
+                        </p>
+                    </div>
+                    <div class="reveal cadre trans1">
+                        <h1>React.js</h1>
+                        <img src="react.js.jpg" alt="React.js" title="React.js">
+                        <p style="background-color:rgb(114, 209, 253);">React est une bibliothèque JavaScript open-source qui est utilisée pour construire des interfaces utilisateur spécifiquement pour des applications d'une seule page. 
+                            Elle est utilisée pour gérer la couche d'affichage des applications web et mobiles. React nous permet également de créer des composants d'interface utilisateur réutilisables. 
+                            React permet aux développeurs de créer de grandes applications web qui peuvent modifier les données, sans avoir à recharger la page. 
+                            L'objectif principal de React est d'être rapide, évolutif et simple
+                        </p>
+                    </div>
+                    <div class="reveal cadre trans2">
+                        <h1>Node.js</h1>
+                        <img src="node.js.jpg" alt="NOde.js" title="Node.js">
+                        <p style="background-color: rgb(54, 194, 54);">Node.js est un environnement d’exécution single-thread, open-source et multi-plateforme permettant de créer des applications rapides et évolutives côté serveur et en réseau. 
+                            Il fonctionne avec le moteur d’exécution JavaScript V8 et utilise une architecture d’E / S non bloquante et pilotée par les événements, ce qui le rend efficace et adapté aux applications en temps réel.
+                            Selon Wikipédia &laquo; Node.js est une compilation packagée du moteur JavaScript V8 de Google, de la couche d’abstraction de la plateforme libuv et d’une bibliothèque centrale, qui est elle-même principalement écrite en JavaScript &raquo;
+                        </p>
+                    </div>
+                    <p class="langages reveal gauche">
+                        Il y en a aussi beaucoup d'autres langages de programmation existant à part ceux qui viennent d'être cités, comme : 
+                    </p>
+                    <div class="reveal cadre resumer">
+                        <h1>PHP</h1>
+                        <img src="php.jpg" alt="PHP" title="PHP">
+                    </div>
+                    <div class="reveal cadre resumer">
+                        <h1>Java</h1>
+                        <img src="java.jpg" alt="Java" title="Java">
+                    </div>
+                    <div class="reveal cadre resumer">
+                        <h1>Django</h1>
+                        <img src="django.jpg" alt="Django" title="Django">
+                    </div>
+                </div>
+            </div>
+            
+            <!--The footer-->
+            <footer class="footer">
+                <adress class="reveal">
+                    <strong style="letter-spacing: 8px;font-size: 32px;text-shadow:4px 2px 4px black"><span style="color:powderblue;">BOU</span><span style="color:rgb(93, 160, 187);">BA</span><span style="color: rgb(66, 192, 250);">CAR</span></strong>
+                    <div style="font-size: small;text-align: center;">
+                        <p>&copy;2024 Tous droits réservés.</p>
+                    </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

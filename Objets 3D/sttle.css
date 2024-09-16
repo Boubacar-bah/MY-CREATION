@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: white;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: purple;
+}
+
+/*le côté drroit*/
+
+.flexcontainer {
+    width: 16%;
+    top: 0;
+    bottom: 0;
+    right: 84%;
+    transition: .3s ease;
+    height: 100%; 
+    overflow: auto;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+}
+.sidebar {
+    background-color: black;
+    width: 100%;
+}
+
+/*L'affichage des grilles*/
+.headers {
+    grid-area: header;                          
+    background-color: purple;
+}
+.secondside {
+    grid-area: second;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.70) url("developer.jpg") no-repeat;
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    height: 100vh;
+    border-radius: 50px 0 0 0;
+}
+.thirt {
+    grid-area: third;
+    background-color: black;
+    padding: 50px 0 ;
+    border-radius: 800px / 300px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-bottom: 100px;
+}
+.welcome {
+    text-align: center;
+    font-family: "Sofia";
+    font-size: 2em;
+    padding: 15px;
+}
+.welcome p {
+    color: lightblue; 
+    text-shadow: 0 0 16px blue;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: "Dela Gothic One";
+}
+.littleAnim {
+    font-size: 13px;
+    margin-top: -15px;
+    width: 230px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    font-family: "Kanit";
+}
+.littleAnim p {
+    white-space: nowrap;
+    animation: txt 15s infinite;
+    animation-timing-function: linear;
+}
+@keyframes txt {
+    from{transform: translateX(100%);}
+    to  {transform: translateX(-250%)};
+}
+.footer {
+    grid-area: footer;
+    background-color: purple;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 2px;
+    align-items: center;
+}
+.footer strong {
+    font-family: "Dela Gothic One"
+}
+.grid {
+    width: 84%;
+    display: grid;
+    margin-left: 16%;
+    grid-template-areas: 'header header header header header header'
+                        'second second second second second second'
+                        'third third third third third third'
+                        'footer footer footer footer footer footer'
+}
+
+/* l'en-tête*/
+.headers .flexcont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.open {
+    font-size: 30px;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: 0.3s;
+    padding: 0 5px 0 5px;
+}
+.open:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.close {
+    font-size:30px;
+    cursor:pointer;
+    float: right;
+    width: 30px;
+    text-align: center;
+    opacity: 0.6;
+    background-color: #333;
+    transition: 0.3s;
+    -webkit-transition: .3s;
+}
+.close:hover {
+    opacity: 1;
+}
+.headers h1 {
+    font-family: "Kanit";
+    letter-spacing: 1.5px;
+    color: rgba(95, 95, 215);
+    text-align: center;
+    text-shadow: 0px 0px 10px black, 0px 0px 20px black;
+}
+.headers input {
+    width: 40px;
+    padding: 8px 4px 8px 40px;
+    transition: .2s;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid #246dcc;
+    font-size: 14px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 7px; 
+    background-repeat: no-repeat;
+    -webkit-transition: width 1s;
+    transition: width .3s;
+    position: absolute;
+    z-index: 1;
+    top: 5px;
+    right: 0
+}
+.headers input:focus {
+    outline: none;
+    border: 3px solid #246dcc;
+    width: 100%;
+}
+@media only screen and (min-width:700px) {
+    .headers input:focus {
+        width: 300px;
+        transition: 0.3s linear;
+    }
+}
+#searchField {
+    position: absolute;
+    top: 26px;
+    right: 0;
+    z-index: 1;
+    border-radius: 8px;
+    background-color: whitesmoke;
+    color: black;
+    padding: 1px;
+    width: 300px;
+    display: none;
+    
+}
+#searchField a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 8px 0px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+#searchField a:hover {
+    background-color: rgb(146, 49, 133);
+    color: white;
+}
+
+/* pour la navigation*/
+.sidebar ul {
+    width: 100%;
+    overflow: hidden;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul a {
+    display: block;
+    padding: 20px 0 20px 0;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid purple;
+}
+.sidebar ul a:hover:not(.active) {
+    background-color: #123;
+    transition: .5s;
+}
+.sidebar .active {
+    background-color: #333;;
+}
+.defhead {
+    text-align: center; 
+    font-family: 'Lucida Console', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5em;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 20px; 
+    color: lightblue; 
+    text-shadow: 0 0 16px blue;
+}
+.definition  {
+    width:50%;
+    margin:auto;
+}
+.defp {
+    line-height: 25px; 
+    font-size:14px; 
+    letter-spacing: 2px; 
+    text-align-last: justify;
+}
+.button {
+    text-align: center;
+    width: 100%;
+    padding: 16px;
+    margin-top: 50px;
+    background: purple;
+    border-radius: 16px 4px;
+    animation: anim 1s linear infinite;
+    color: white;
+    font-size: 2em; 
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px rgb(0, 0, 100);
+}
+.button:active {
+    box-shadow: 0 0;
+    top: 4px;
+}
+.button:hover {
+    animation-duration: 0.6s;
+    text-shadow: 2px 2px 4px blue, -2px -2px 4px red, 1px 1px 3px orange;
+    color: powderblue;
+}
+@keyframes anim {
+    50% {background: linear-gradient(to right, purple, violet);}
+    100% {background: linear-gradient(to right, violet, purple);}
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+}
+.droit {
+    transform: translateX(50px);
+}
+.gauche {
+    transform: translateX(-50px);
+}
+.bottom {
+    transform: translateY(-50px);
+}
+.reveal-visible {
+    opacity: 1;
+    transform: translate(0);
+    transition: 1.5s cubic-bezier(.5, 0, 0, 1);
+}
+
+/* pour les télépones mobiles */
+@media screen and (max-width: 500px) {
+    .flexcontainer {
+        width: 0;
+        right: 100%;
+    }
+    .grid {
+        width: 100%;
+        margin: 0;
+    }
+    .headers h1 {
+        font-size: 1.2em;
+        margin-right: 30px;
+    }
+    .defhead {
+        font-size: 2em;
+        margin-top: 50px;
+    }
+    .definition {
+        width: 70%;
+    }
+    .defp {
+        text-align: justify;
+        text-justify: inter-character;
+    }
+    .footer {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 501px) {
+    .open {
+        visibility: hidden;
+    }
+    .close {
+        display:  none;
+    }
+    .flexcontainer {
+        display: block;
+    }
+}
