@@ -299,36 +299,40 @@ article p {
 .images {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     color: black;
-    margin: 60px 10px;
+    width: 700px;
+    margin: auto;
 }
 .images .cadre {
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     margin: 8px;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-around;
-    max-width: 30%;
-    border-radius: 12px;
+    max-width: 100%;
+    border-radius: 12px / 24px;
     padding: 10px 15px 0;
-    box-shadow: 0 0 8px black, 0 0 19px rgba(0, 0, 0, 0.7), 0 0 30px black;
 }
 .images img {
     float: left;
+    border-radius: 12px;
 }
 .cadre h1 {
     font-family: "Archivo Black";
     font-size: 32px;
+    color: black;
+    line-height: 100px;
     margin-bottom: 0;
 }
 .images .cadre p {
     font-family: "Kanit";
     text-align: justify;
     padding: 8px;
-    background-color: rgba(255, 255, 0, 0.911);
+    font-family: 1.4em;
+    letter-spacing: 1.5px;
+    color:  rgb(214, 234, 253);
     border-radius: 8px;
-    box-shadow: 0 0 8px black;
     
 }
 .resumer {
@@ -344,14 +348,34 @@ article p {
 /*le footer*/
 .footer {
     grid-area: footer;
-    background-color: purple;
+    background-color: black;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     letter-spacing: 2px;
     align-items: center;
 }
+.footer > div {
+    padding: 50px;
+    flex: 30%;
+}
+.footer p {
+    text-align: center;
+    font-size: 12px;
+}
+.footer .contact {
+    display: flex;
+    flex-direction: row;
+}
 .footer strong {
     font-family: "Dela Gothic One";
+    letter-spacing: 8px;
+    text-align: center;
+    font-size: 32px;
+}
+.footer a {
+    color: white;
+    text-align: left;
 }
 .reveal {
     opacity: 0;
@@ -378,8 +402,19 @@ article p {
         margin: 0;
         width: 100%;
     }
-    .images .cadre {
-        max-width: 100%;
+    .images {
+        width: 85%;
+    }
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer > div {
+        width: 70%;
+        padding: 10px;
+    }
+    .footer strong {
+        letter-spacing: 3px;
     }
 }
 @media screen and (min-width: 501px) {
