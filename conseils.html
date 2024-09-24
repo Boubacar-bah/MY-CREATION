@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Developer</title>
     <link rel="stylesheet" href="conseils.css">
-    <link ref="icon" type="image/x-icon" href="logo.png">
     <link rel="icon" type="image/x-icon" href="mylogo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Kanit|Dela+Gothic+One|Archivo+Black|Abril+Fatface"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="animation.js" defer="true"></script>
     <script>
         function openNav() {
@@ -40,7 +40,7 @@
     <div class="flexcontainer">
         <nav class="navigation" id="monNav">
             <div class="close" onclick="closeNav()">&times;</div>
-            <img src="logo.png" width="100%">
+            <img src="logo.png" alt="Logo" width="100%">
             <a href="index.html">Accueil</a>
             <a href="#introduction" class="active" id="introduction">Introduction</a>
             <a href="#langage" id="langage">Les langages</a>
@@ -110,14 +110,16 @@
                 </p>
                 <div class="images">
                     <div class="reveal cadre">
+                        <h1>HTML</h1>
                         <img src="html.jpg" alt="HTML" title="Hyper Text Markup Language">
-                        <p style="color: white;background-color: tomato;">Le HTML (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) est le langage de balisage
+                        <p>Le HTML (<strong>H</strong>yper <strong>T</strong>ext <strong>M</strong>arkup <strong>L</strong>anguage) est le langage de balisage
                         standard pour les pages Web. Avec HTML ; vous pouvez créer votre propre site Web. Il décrit la structure d'une page Web,
                         Et il dit au navigateur comment afficher le contenu, Et c'est un langage très facile à apprendre.</p> 
                     </div>
                     <div class="reveal cadre trans1">
+                        <h1>CSS</h1>
                         <img src="css.jpg" alt="CSS" title="Cascading Syle Sheets">
-                        <p style="color: white; background-color: rgb(56, 56, 190);">Le CSS (<b>C</b>ascading <b>S</b>tyle <b>S</b>heets) signifie feuilles de style en cascade
+                        <p>Le CSS (<b>C</b>ascading <b>S</b>tyle <b>S</b>heets) signifie feuilles de style en cascade
                             CSS décrit comment les éléments HTML doivent être affichés sur un écran, sur du papier ou dans d'autres médias.
                             Le CSS permet d'économiser beaucoup de travail. Il permet de contrôler la mise en page de plusieurs pages Web à la fois</p>
                     </div>
@@ -133,7 +135,7 @@
                     <div class="reveal cadre">
                         <h1>Python</h1>
                         <img src="python.jpg" alt="Python" title="Python">
-                        <p style="color: rgb(29, 71, 114); background-color: rgba(255, 166, 0, 0.61)">Python est un langage de programmation open source largement utilisé, particulièrement dans la gestion d'infrastructures, 
+                        <p>Python est un langage de programmation open source largement utilisé, particulièrement dans la gestion d'infrastructures, 
                             l'analyse de données et le développement de logiciels. Il se distingue par sa simplicité, 
                             permettant aux développeurs de se concentrer sur leurs tâches plutôt que sur les contraintes de forme des langages plus anciens, ce qui accélère le développement. 
                             Python est également accessible aux débutants avec un peu de pratique, et de nombreux tutoriels et forums sont disponibles pour les aider.
@@ -142,7 +144,7 @@
                     <div class="reveal cadre trans1">
                         <h1>React.js</h1>
                         <img src="react.js.jpg" alt="React.js" title="React.js">
-                        <p style="background-color:rgb(114, 209, 253);">React est une bibliothèque JavaScript open-source qui est utilisée pour construire des interfaces utilisateur spécifiquement pour des applications d'une seule page. 
+                        <p>React est une bibliothèque JavaScript open-source qui est utilisée pour construire des interfaces utilisateur spécifiquement pour des applications d'une seule page. 
                             Elle est utilisée pour gérer la couche d'affichage des applications web et mobiles. React nous permet également de créer des composants d'interface utilisateur réutilisables. 
                             React permet aux développeurs de créer de grandes applications web qui peuvent modifier les données, sans avoir à recharger la page. 
                             L'objectif principal de React est d'être rapide, évolutif et simple
@@ -151,7 +153,7 @@
                     <div class="reveal cadre trans2">
                         <h1>Node.js</h1>
                         <img src="node.js.jpg" alt="NOde.js" title="Node.js">
-                        <p style="background-color: rgb(54, 194, 54);">Node.js est un environnement d’exécution single-thread, open-source et multi-plateforme permettant de créer des applications rapides et évolutives côté serveur et en réseau. 
+                        <p>Node.js est un environnement d’exécution single-thread, open-source et multi-plateforme permettant de créer des applications rapides et évolutives côté serveur et en réseau. 
                             Il fonctionne avec le moteur d’exécution JavaScript V8 et utilise une architecture d’E / S non bloquante et pilotée par les événements, ce qui le rend efficace et adapté aux applications en temps réel.
                             Selon Wikipédia &laquo; Node.js est une compilation packagée du moteur JavaScript V8 de Google, de la couche d’abstraction de la plateforme libuv et d’une bibliothèque centrale, qui est elle-même principalement écrite en JavaScript &raquo;
                         </p>
@@ -175,12 +177,34 @@
             </div>
             
             <!--The footer-->
-            <footer class="footer">
-                <adress class="reveal">
-                    <strong style="letter-spacing: 8px;font-size: 32px;text-shadow:4px 2px 4px black"><span style="color:powderblue;">BOU</span><span style="color:rgb(93, 160, 187);">BA</span><span style="color: rgb(66, 192, 250);">CAR</span></strong>
+            <hr style="margin-block: 0;">
+            <footer class="footer reveal">
+                <div class="reveal">
+                    <a href="index.html">
+                        <img src="logo.png" alt="logo" width="50%">
+                    </a>
+                </div>
+                <div class="reveal Contact">
+                    <p><strong><span style="color:powderblue;">BOU</span><span style="color:rgb(93, 160, 187);">BA</span><span style="color: rgb(66, 192, 250);">CAR</span></strong></p>
+                    <p>
+                        <a href="mailto:boubacarbahbou6444@gmail.com" target="_blank">boubacarbahbou6444@gmail.com<a>
+                    </p>
+                    <p style="text-align: center"><i class="material-icons">phone</i> +221 70 499 24 52</p>
+                </div>
+                <div>
+                    <p>Voulez-vous des sites pour apprendre à developper ? <br><br>
+                        <a href="https://w3schools.com" target="_blank">W3schools</a>
+                        <br><br>
+                        <a href="https://openclassrooms.com" target="_blank">openclassrooms</a>
+                        <br><br>
+                        <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>
+                    </p>
+                </div>
+                <div style="padding: 15px;">
                     <div style="font-size: small;text-align: center;">
                         <p>&copy;2024 Tous droits réservés.</p>
                     </div>
+                </div>
             </footer>
         </div>
     </div>
