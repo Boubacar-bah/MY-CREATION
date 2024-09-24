@@ -305,7 +305,7 @@ article p {
     margin: auto;
 }
 .images .cadre {
-    background-color: rgba(0, 0, 0, 0.1);
+    /*background-color: rgba(0, 0, 0, 0.1);*/
     display: flex;
     margin: 8px;
     flex-flow: row wrap;
