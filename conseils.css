@@ -305,7 +305,7 @@ article p {
     margin: auto;
 }
 .images .cadre {
-    /*background-color: rgba(0, 0, 0, 0.1);*/
+    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     margin: 8px;
     flex-flow: row wrap;
@@ -375,6 +375,7 @@ article p {
 }
 .footer a {
     color: white;
+    text-align: left;
 }
 .reveal {
     opacity: 0;
@@ -392,6 +393,21 @@ article p {
     transition: 1.5s cubic-bezier(.5, 0, 0, 1);
 }
 /*medeas */
+@media screen and (min-width: 900px) and (max-width: 1122px) {
+    .footer > div {
+        flex: 25%;
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 899px) and (min-width: 502px) {
+    .footer > div {
+        flex: 100%;
+        flex-direction: row;
+    }
+    .footer img {
+        margin-left: 25%;
+    }
+}
 @media screen and (max-width: 500px) {
     .navigation {
         width: 0;
