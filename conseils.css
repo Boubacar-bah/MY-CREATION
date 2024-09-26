@@ -303,6 +303,7 @@ article p {
     color: black;
     width: 700px;
     margin: auto;
+    margin-bottom: 100px;
 }
 .images .cadre {
     background-color: rgba(0, 0, 0, 0.1);
