@@ -375,7 +375,19 @@ article p {
 }
 .footer a {
     color: white;
-    text-align: left;
+}
+.Icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.Icons a {
+    padding: 12px;
+    font-size: 30px;
+    transition: .3s;
+}
+.Icons a:hover {
+    color: powderblue;
 }
 .reveal {
     opacity: 0;
