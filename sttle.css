@@ -231,7 +231,6 @@ body {
     line-height: 25px; 
     font-size:14px; 
     letter-spacing: 2px; 
-    text-align-last: justify;
 }
 .button {
     text-align: center;
@@ -351,6 +350,19 @@ body {
     .footer strong {
         letter-spacing: initial;
     }
+}
+.Icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.Icons a {
+    padding: 12px;
+    font-size: 30px;
+    transition: .3s;
+}
+.Icons a:hover {
+    color: powderblue;
 }
 @media screen and (min-width: 900px) and (max-width: 1122px) {
     .footer > div {
