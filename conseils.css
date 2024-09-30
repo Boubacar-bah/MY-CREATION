@@ -346,6 +346,31 @@ article p {
     transition: 1.8s !important;
 }
 
+.toTop {
+    position: fixed;
+    display: block;
+    z-index: 2;
+    opacity: 1;
+    top: 75%;
+    text-align: center;
+    border: 1px solid;
+    transform: rotate(-90deg);
+    width: 40px;
+    cursor: pointer;
+    right: 10%;
+    transition: .6s;
+}
+.toTop a {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+}
+.noVisible {
+    opacity: 0;
+    top: 100%;
+    width: 0px;
+}
+
 /*le footer*/
 .footer {
     grid-area: footer;
