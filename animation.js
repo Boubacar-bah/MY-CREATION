@@ -18,6 +18,19 @@
         observer.observe(r)
     })
 
+    const handleItersect2 = function(entries, observe2) {
+        entries.forEach(function (entry) {
+            if (entry.intersectionRatio > ratio) {
+                document.getElementById('top').classList.add('noVisible')
+            } else {
+                document.getElementById('top').classList.remove('noVisible')
+            }
+        })
+    }     
+
+const observe2 = new IntersectionObserver(handleItersect2, options);
+observe2.observe(document.getElementById('tracked'))
+
 {
     function hideIt() {
         document.getElementById('searchField').style.display = "none";
