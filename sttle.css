@@ -287,13 +287,13 @@ body {
     display: block;
     z-index: 2;
     opacity: 1;
-    top: 75%;
+    bottom: 10px;
     text-align: center;
     border: 1px solid;
     transform: rotate(-90deg);
     width: 40px;
     cursor: pointer;
-    right: 10%;
+    right: 10px;
     transition: .6s;
 }
 .toTop a {
