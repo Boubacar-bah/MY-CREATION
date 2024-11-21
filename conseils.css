@@ -309,12 +309,13 @@ article p {
     background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     margin: 8px;
+    margin-top: 15px;
     flex-flow: row wrap;
     justify-content: space-around;
     max-width: 100%;
     border-radius: 12px / 24px;
     padding: 10px 15px 0;
-    box-shadow: 0 0 40px black;
+    box-shadow: 0 0 40px black, 0 0 30px powderblue;
 }
 .images img {
     float: left;
