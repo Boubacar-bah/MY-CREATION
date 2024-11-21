@@ -314,6 +314,7 @@ article p {
     max-width: 100%;
     border-radius: 12px / 24px;
     padding: 10px 15px 0;
+    box-shadow: 0 0 0 6px black;
 }
 .images img {
     float: left;
@@ -325,7 +326,6 @@ article p {
     color: black;
     line-height: 100px;
     margin-bottom: 0;
-    box-shadow: 0 0 0 6px black;
 }
 .images .cadre p {
     font-family: "Kanit";
