@@ -325,6 +325,7 @@ article p {
     color: black;
     line-height: 100px;
     margin-bottom: 0;
+    box-shadow: 0 0 0 6px black;
 }
 .images .cadre p {
     font-family: "Kanit";
