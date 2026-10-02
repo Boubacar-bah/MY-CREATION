@@ -40,7 +40,7 @@
         if (input.value.length == 0) {
             ul.style.display = "none";
         } else {
-            ul.display = "block";
+            ul.style.display = "block";
         }
     }
 }
